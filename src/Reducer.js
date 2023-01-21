@@ -1,51 +1,41 @@
 export const initialState={
-    basket: [],
+  basket: [],
 }
-
 //selector
-export const getBasketTotal = (basket) => 
-  basket?.reduce((amount, item) => item.price + amount, 0);
+export const getBasketTotal=(basket)=>
+basket?.reduce((amount, item)=>item.price+amount, 0)
+const reducer=(state, action)=>{
 
-const reducer = (state, action) => {
-  console.log(action);
-  switch (action.type) {
-    case "ADD_TO_BASKET":
+  console.log(action)
+  switch(action.type){
+     case 'ADD_TO_BASKET':
       localStorage.setItem('list',JSON.stringify( [...state.basket,action.item]))
-      return {
-        ...state,
-        basket: [...state.basket, action.item],
+      return{
+          ...state,
+          basket: [...state.basket,action.item],
       };
-    
-    case 'EMPTY_BASKET':
-      return {
-        ...state,
-        basket: []
-      }
+      case "REMOVE_FROM_BASKET":
+        console.log('delition-started');
+         let allList = JSON.parse(localStorage.getItem('list'));
+         const index = allList.findIndex(item => item.id === action.id);
+         if(index === -1) {
+          return {
+            state,basket:allList
+          }
+         }
+         console.log(index + 'i')
+         console.log(allList)
+         allList.splice(index,1);
+         console.log(allList)
+         localStorage.setItem('list', JSON.stringify(allList));
 
-    case "REMOVE_FROM_BASKET":
-      const index = state.basket.findIndex(
-        (basketItem) => basketItem.id === action.id
-      );
-      let newBasket = [...state.basket];
-
-      if (index >= 0) {
-        newBasket.splice(index, 1);
-
-      } else {
-        console.warn(
-          `Cant remove product (id: ${action.id}) as its not in basket!`
-        )
-      }
-
-      return {
-        ...state,
-        basket: newBasket
-      }
-    
-
-    default:
-      return state;
+         return{  
+          ...state,
+           basket:allList, 
+         }
+         default:
+          return state;
   }
-};
+}
 
 export default reducer;

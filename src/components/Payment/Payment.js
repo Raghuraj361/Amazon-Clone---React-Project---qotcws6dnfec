@@ -1,7 +1,5 @@
 import React, { useState } from 'react'
 import './Payment.css';
-//import { ToastContainer,toast } from 'react-toastify';
-//import 'react-toastify/dist/ReactToastify.css'
 
 function Payment() {
 
@@ -15,9 +13,6 @@ function Payment() {
    }
    const submitCard = () => {
     setPopup(false);
-    // toast.success(" order has been placed",{
-    // position:"top-center"
-    // })
    }
 
   return (
@@ -61,7 +56,7 @@ function Payment() {
           </div>
         </div>:''}
        </div>
-       {/* <ToastContainer/> */}
+
     </div>
   );
 }

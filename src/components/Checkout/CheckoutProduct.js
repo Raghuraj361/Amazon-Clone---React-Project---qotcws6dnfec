@@ -10,6 +10,7 @@ function CheckoutProduct({id, image, title, price, rating}) {
 
     const removeFromBasket = () => {
         // remove the item from the basket
+        console.log('deleted');
          dispatch({
             type: 'REMOVE_FROM_BASKET',
             id: id,
@@ -38,7 +39,10 @@ function CheckoutProduct({id, image, title, price, rating}) {
                 <p key={i}>❤️</p>
             ))}
          </div>
+         <React.StrictMode>
+       
          <button onClick={removeFromBasket} className='checkoutProduct__button'>Remove from Basket</button>
+         </React.StrictMode>
       </div>
     </div>
   )

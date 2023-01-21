@@ -10,17 +10,20 @@ import Payment from './Payment/Payment';
 
 function App() {
   return (
-    <BrowserRouter>
+
+    
      <div id='main'>
+      <BrowserRouter>
       <Header/>
        <Routes>
-        <Route path='/' element={<Home/>}></Route>
-          <Route path='/checkout' element={<Checkout/>}></Route>
+        <Route exact path="/" element={<Home/>}/>
+          <Route exact path="/checkout" element={<Checkout/>}/>
           <Route path='/login' element={<Login/>}></Route>
           <Route path='/payment' element={<Payment/>}></Route>
        </Routes>
+       </BrowserRouter>
      </div>
-    </BrowserRouter>
+   
 
   );
 }
