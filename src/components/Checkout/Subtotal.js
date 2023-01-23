@@ -30,7 +30,7 @@ import { Link } from "react-router-dom";
                   value={getBasketTotal(basket)}
                   displayType={"text"}
                   thousandSeparator={true}
-                  prefix={"$"}
+                  prefix={"₹"}
 
                />
                   <Link to='/payment'>

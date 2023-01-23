@@ -26,8 +26,8 @@ text-decoration: none;
 .headerOption{
     display: flex;
     flex-direction: column;
-margin-left: 10px;
-margin-right: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 .headerOption1{
     font-size: 10px;

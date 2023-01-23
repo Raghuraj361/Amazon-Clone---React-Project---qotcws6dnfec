@@ -7,15 +7,7 @@ import { faCartPlus, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons
 import { useStateValue } from "../StateProvider/StateProvider";
 
 
-// const getItems=()=>{
-//   let allList=localStorage.getItem('list');
-//   console.log(allList);
-//   if(allList){
-//     return JSON.parse(allList);
-//     }else{
-//       return[];
-//     }
-// }
+
 
 
 function Header(){

@@ -7,6 +7,7 @@ basket?.reduce((amount, item)=>item.price+amount, 0)
 const reducer=(state, action)=>{
 
   console.log(action)
+  // The reducer normally looks at the action type field to decide what happens
   switch(action.type){
      case 'ADD_TO_BASKET':
       localStorage.setItem('list',JSON.stringify( [...state.basket,action.item]))
@@ -23,17 +24,20 @@ const reducer=(state, action)=>{
             state,basket:allList
           }
          }
-         console.log(index + 'i')
-         console.log(allList)
+        //  console.log(index + 'i')
+        //  console.log(allList)
          allList.splice(index,1);
-         console.log(allList)
+        //  console.log(allList)
          localStorage.setItem('list', JSON.stringify(allList));
 
          return{  
-          ...state,
+          ...state,     // returning previous data with the help of spread operator
            basket:allList, 
          }
+
          default:
+          // If this reducer doesn't recognize the action type, or doesn't
+         // care about this specific action, return the existing state unchanged
           return state;
   }
 }

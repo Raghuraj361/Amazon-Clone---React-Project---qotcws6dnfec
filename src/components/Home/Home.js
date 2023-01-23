@@ -6,10 +6,10 @@ function Home(){
   const [users,setUsers]=useState([]);
     const getUsers = async()=>{
     const response=await fetch("https://content.newtonschool.co/v1/pr/63b6c911af4f30335b4b3b89/products")
-    setUsers(await response.json())
+    setUsers(await response.json()) // A function that update the state
     }
     useEffect(()=>{
-      getUsers();
+      getUsers(); 
     },[])
     
 
@@ -22,9 +22,8 @@ function Home(){
               {/* Product */}
               <div className="homeRow">
                 {
-                 users.map((product)=>{
-                      // console.log(product)
-        
+                 users.map((product)=>{ // go through
+                  console.log(product);
                    return(
                      <Product data={product} key={product.id}/>
                    )

@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
 import './Payment.css';
+import { useStateValue } from '../StateProvider/StateProvider';
 
 function Payment() {
-
    const [popup, setPopup] = useState(false);
+   const [{ basket }, dispatch] = useStateValue();
 
    const handleClickPopup = () => {
     setPopup(!popup);
@@ -34,20 +35,23 @@ function Payment() {
               <div className='payment__method'>Select Payment Method</div>
               <div className='all__radio' >
               <label htmlFor='a'>
-                <input type="radio" id='a' className='input__radio1' value="option3" />
+                <input type="radio" id='a' name='temp' className='input__radio1' value="option3" />
                 Pay with UPI IDs /Net Banking
               </label>
               <label htmlFor='b'>
-                <input type="radio" id='b'className='input__radio2' value="option3" />
+                <input type="radio" id='b' name='temp' className='input__radio2' value="option3" />
                 Pay With Debit/Credit/ATM Cards
               </label>
               <label htmlFor='c'>
-                <input type="radio" id='c' className='input__radio3' value="option3" />
+                <input type="radio" id='c' name='temp' className='input__radio3' value="option3" />
                 Cash on Delivery/Pay on Delivery
               </label>
               </div>
               <div>
-                <button className='completePaymentButton' onClick={submitCard}>Complete Payment Dutton</button>
+                <button 
+                    className='completePaymentButton' 
+                    onClick={submitCard}>Complete Payment Dutton
+                </button>
               </div>
             </div>
           </div>

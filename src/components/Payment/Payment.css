@@ -3,7 +3,7 @@
   
 }
 .main {
-  background-color: gary;
+  background-color: gray;
   height: 100%;
   width: 100%;
   position: absolute;
@@ -41,11 +41,6 @@
   width: 470px;
   height: 100px;
 }
-.all__radio {
-  display: grid;
-    gap: 10px;
-}
-
 .payment__method {
   margin: 10px;
 }
@@ -60,13 +55,18 @@
 }
 .input__radio1 {
   position: relative;
-  right: 15px;
 }
 .input__radio2 {
   position: relative;
-  right: 6px;
 }
 .input__radio3 {
   position: relative;
-  right: 8px;
+}
+.all__radio {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: center;
+  align-items: flex-start;
 }

@@ -3,14 +3,12 @@ import './CheckoutProduct.css';
 import { useStateValue } from '../StateProvider/StateProvider';
 
 
-
-
 function CheckoutProduct({id, image, title, price, rating}) {
     const [{ basket }, dispatch] = useStateValue();
 
     const removeFromBasket = () => {
         // remove the item from the basket
-        console.log('deleted');
+      //   console.log('deleted');
          dispatch({
             type: 'REMOVE_FROM_BASKET',
             id: id,
@@ -18,8 +16,6 @@ function CheckoutProduct({id, image, title, price, rating}) {
     }
 
     
-
-
   return (
     <div className='checkoutProduct'>
       <img  
@@ -30,19 +26,11 @@ function CheckoutProduct({id, image, title, price, rating}) {
       <div className='checkoutProduct__info'>
          <p className='checkoutProduct__title'>{title}</p>
          <p className='checkoutProduct__price'>
-            <strong>{`price ${price}`}</strong>
+            <strong>{`₹ ${price}`}</strong>
          </p>
-         <div className='checkoutProduct__rating'>
-            {Array(rating)
-            .fill()
-            .map((_, i) => (
-                <p key={i}>❤️</p>
-            ))}
-         </div>
-         <React.StrictMode>
-       
+         <p className='checkoutProduct__rating'>❤️
+         </p>
          <button onClick={removeFromBasket} className='checkoutProduct__button'>Remove from Basket</button>
-         </React.StrictMode>
       </div>
     </div>
   )
