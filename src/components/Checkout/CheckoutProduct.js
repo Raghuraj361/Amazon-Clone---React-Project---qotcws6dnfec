@@ -3,8 +3,6 @@ import './CheckoutProduct.css';
 import { useStateValue } from '../StateProvider/StateProvider';
 
 
-
-
 function CheckoutProduct({id, image, title, price, rating}) {
     const [{ basket }, dispatch] = useStateValue();
 
@@ -18,8 +16,6 @@ function CheckoutProduct({id, image, title, price, rating}) {
     }
 
     
-
-
   return (
     <div className='checkoutProduct'>
       <img  
@@ -32,13 +28,8 @@ function CheckoutProduct({id, image, title, price, rating}) {
          <p className='checkoutProduct__price'>
             <strong>{`price ${price}`}</strong>
          </p>
-         <div className='checkoutProduct__rating'>
-            {Array(rating)
-            .fill()
-            .map((_, i) => (
-                <p key={i}>❤️</p>
-            ))}
-         </div>
+         <p className='checkoutProduct__rating'>{`❤️ ${props.data.rating.rate}`}
+         </p>
          <React.StrictMode>
        
          <button onClick={removeFromBasket} className='checkoutProduct__button'>Remove from Basket</button>
