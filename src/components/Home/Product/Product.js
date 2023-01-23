@@ -28,7 +28,7 @@ function Product(props){
          <div className="product__info">
           <p>{props.data.title}</p>
           <p className="product__price">    
-            <strong>{`price ${props.data.price}`}</strong>
+            <strong>{`₹ ${props.data.price}`}</strong>
           </p>
           {/* <p>{props.data.rating[0]}</p> */}
        <p className="product__rating">{`❤️ ${props.data.rating.rate}`}
