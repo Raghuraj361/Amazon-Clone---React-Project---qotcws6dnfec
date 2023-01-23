@@ -21,6 +21,7 @@ function Product(props){
             },
         })
     }
+
     return(
         
         <div className="product">
@@ -30,21 +31,15 @@ function Product(props){
             <strong>{`price ${props.data.price}`}</strong>
           </p>
           {/* <p>{props.data.rating[0]}</p> */}
-       <div className="product__rating">
-         {Array(props.data.rating)
-           .fill()
-           .map((_, i) => (
-             <p key={i}>❤️</p>
-            
-           ))}
-       </div>
+       <p className="product__rating">{`❤️ ${props.data.rating.rate}`}
+       </p>
      </div>
 
      <img src={props.data.image} alt="#" /> 
       <button onClick={addToBasket} className='product__button'>Add to Basket</button>
      </div>
     
-
     )
 }
+
 export default Product
