@@ -6,8 +6,6 @@ import { useStateValue } from "../StateProvider/StateProvider";
 import { Link } from "react-router-dom";
 
 
-
-
    function Subtotal(){
     const [{basket}, dispatch]=useStateValue();
 
@@ -30,7 +28,7 @@ import { Link } from "react-router-dom";
                   value={getBasketTotal(basket)}
                   displayType={"text"}
                   thousandSeparator={true}
-                  prefix={"$"}
+                  prefix={"₹"}
 
                />
                   <Link to='/payment'>
