@@ -26,7 +26,7 @@ function CheckoutProduct({id, image, title, price, rating}) {
       <div className='checkoutProduct__info'>
          <p className='checkoutProduct__title'>{title}</p>
          <p className='checkoutProduct__price'>
-            <strong>{`price ${price}`}</strong>
+            <strong>{`₹ ${price}`}</strong>
          </p>
          <p className='checkoutProduct__rating'>{`❤️ ${props.data.rating.rate}`}
          </p>
