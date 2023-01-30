@@ -6,6 +6,7 @@ import Home from './Home/Home';
 import Login from './Login/Login';
 import Checkout from './Checkout/Checkout';
 import Payment from './Payment/Payment';
+import Footer from './Footer/Footer';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
           <Route path='/login' element={<Login/>}/>
           <Route path='/payment' element={<Payment/>}/>
        </Routes>
+       <Footer/>
        </BrowserRouter>
      </div>
   );

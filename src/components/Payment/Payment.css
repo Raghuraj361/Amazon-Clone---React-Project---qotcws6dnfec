@@ -26,9 +26,9 @@
 }
 .popup__button {
   background: #f0c14b;
-  border: 1px solid;
   margin-top: 10px;
-  border-color: #a88734 #9c7e31 #846a29;
+  border-radius: 10px;
+  border: none;
   color: #111;
   cursor: pointer;
   width: 40%;
@@ -46,9 +46,9 @@
 }
 .completePaymentButton {
   background: #f0c14b;
-  border: 1px solid;
   margin-top: 10px;
-  border-color: #a88734 #9c7e31 #846a29;
+  border-radius: 10px;
+  border: none;
   color: #111;
   cursor: pointer;
   width: 40%;

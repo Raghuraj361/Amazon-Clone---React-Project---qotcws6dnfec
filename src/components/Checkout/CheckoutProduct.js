@@ -28,7 +28,7 @@ function CheckoutProduct({id, image, title, price, rating}) {
          <p className='checkoutProduct__price'>
             <strong>{`₹ ${price}`}</strong>
          </p>
-         <p className='checkoutProduct__rating'>❤️
+         <p className='checkoutProduct__rating'>❤️❤️❤️❤️
          </p>
          <button onClick={removeFromBasket} className='checkoutProduct__button'>Remove from Basket</button>
       </div>

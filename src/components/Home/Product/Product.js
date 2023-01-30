@@ -30,7 +30,7 @@ function Product(props){
             <strong>{`₹ ${props.data.price}`}</strong>
           </p>
           {/* <p>{props.data.rating[0]}</p> */}
-       <p className="product__rating">❤️
+       <p className="product__rating">❤️❤️❤️❤️
        </p>
      </div>
 

@@ -24,16 +24,21 @@ const reducer=(state, action)=>{
             state,basket:allList
           }
          }
-        //  console.log(index + 'i')
-        //  console.log(allList)
          allList.splice(index,1);
-        //  console.log(allList)
          localStorage.setItem('list', JSON.stringify(allList));
 
          return{  
           ...state,     // returning previous data with the help of spread operator
            basket:allList, 
          }
+
+        case "CLEAR_ALL_BASKETS":
+        let newPosts = state.basket.findIndex(basket => action.id !== basket.id);
+
+        return {
+          ...state,
+          basket: newPosts,
+        };
 
          default:
           // If this reducer doesn't recognize the action type, or doesn't

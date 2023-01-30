@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
 import './Payment.css';
 import { useStateValue } from '../StateProvider/StateProvider';
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
-function Payment() {
+function Payment({id}) {
    const [popup, setPopup] = useState(false);
    const [{ basket }, dispatch] = useStateValue();
 
@@ -14,6 +16,20 @@ function Payment() {
    }
    const submitCard = () => {
     setPopup(false);
+    toast("successfull", {
+      position: "top-center",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
+    dispatch({
+      type: "CLEAR_ALL_BASKETS",
+      id: id,
+    });
    }
 
   return (
@@ -25,7 +41,7 @@ function Payment() {
           <div className='popup'>
             <div className='popup-leader'>
               <h1>Payment card</h1>
-              <h1 onClick={closePopup}>x</h1>
+              <h1 onClick={closePopup} >x</h1>
             </div>
             <div className='input__area'>
               <label className='payment__label'>Input Delivery Address</label>
@@ -60,7 +76,7 @@ function Payment() {
           </div>
         </div>:''}
        </div>
-
+       <ToastContainer/>
     </div>
   );
 }
