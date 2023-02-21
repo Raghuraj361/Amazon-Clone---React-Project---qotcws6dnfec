@@ -31,7 +31,10 @@ function Header() {
           </div>
           <div>
             <input type="text" className="navbar__searchbox" placeholder="Search Amazon.in" />
+<<<<<<< HEAD
           
+=======
+>>>>>>> da81b065d7d8479327a7544b2ef93013fda35571
           </div>
           <div className="navbar__seaarchboxdiv">
             <div className="navbar__searchicon" />
