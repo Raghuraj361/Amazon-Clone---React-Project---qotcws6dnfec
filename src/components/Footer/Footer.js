@@ -6,7 +6,7 @@ import image from './logo.png'
 const Footer = () => {
 
     const year = new Date().getFullYear();
-    console.log(year);
+    // console.log(year);
 
     const top = () => {
         window.scrollTo(0, 0);

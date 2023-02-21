@@ -7,8 +7,6 @@ import { useStateValue } from "../StateProvider/StateProvider";
 function Header() {
   
   const [{ basket }, dispatch] = useStateValue("");
-  console.log(basket);
-  console.log(dispatch);
 
   return (
     <div className="header">
@@ -32,7 +30,8 @@ function Header() {
             </select>
           </div>
           <div>
-            <input type="text" className="navbar__searchbox" />
+            <input type="text" className="navbar__searchbox" placeholder="Search Amazon.in" />
+          
           </div>
           <div className="navbar__seaarchboxdiv">
             <div className="navbar__searchicon" />

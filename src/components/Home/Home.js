@@ -23,7 +23,7 @@ function Home(){
               <div className="homeRow">
                 {
                  users.map((product)=>{ // go through
-                  console.log(product);
+                  // console.log(product);
                    return(
                      <Product data={product} key={product.id}/>
                    )
