@@ -1,10 +1,10 @@
 
 .navbar__component {
-    width: 100%;
+    width: 100vw;
     height: 60px;
     background-color: #131A22;
     display: flex;
-   
+
 }
 .navbar__logo {
    background: url('https://ik.imagekit.io/amazon1234/sprite_350x_q7QZkJCVl.png?updatedAt=1627121934264') no-repeat -9px -50px;
@@ -104,3 +104,41 @@
     font-size: 14px;
     font-weight: bold;
 }
+
+@media screen and (max-width: 600px) {
+      
+    .navbar__component {
+        justify-content: space-around;
+    }
+    .navbar__locator {
+       display: none;
+    }
+    .nav__dropdown {
+        width: 20px;
+    }
+    .navbar__seaarchboxdiv{
+        width: 25px;
+    }
+    .navbar__searchicon{
+        width: 25px;
+        margin: 0;
+	    margin-top: 11px;
+        
+    }
+    .navbar__searchcomponent {
+        margin-left: 2px;
+    }
+    .navbar__searchbox{
+        width: 154px;
+        height: 38px;
+        margin-top: 8px;
+    }
+    .navbar__signin,.navbar__returns {
+        display: none;
+    }
+    .navbar__footer {
+        width: 400px;
+        display: none;
+    }
+
+  }
